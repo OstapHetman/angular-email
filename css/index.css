@@ -1,0 +1,10 @@
+table{
+	border-collapse: collapse;
+}
+table, tr, td{
+	border: 1px solid #c1c1c1;
+}
+article {
+	display: flex;
+	justify-content: center;
+}
