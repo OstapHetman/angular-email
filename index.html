@@ -1,29 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="emailApp">
 <head>
 	<meta charset="utf-8">
 	<title>angular-email</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
-<body>
+<body>													
 	<article>
-		<table>
-			<tr>
-				<td>Ann</td>
-				<td>I love you</td>
-				<td>May 12</td>
-			</tr>
-			<tr>
-				<td>Ostap</td>
-				<td>Hello! How are you ?</td>
-				<td>May 13</td>
-			</tr>
-			<tr>
-				<td>Ihor</td>
-				<td>Do you want to play a football tomorrow at 9 pm ?</td>
-				<td>May 13</td>
-			</tr>
-		</table>
+		 <table ng-controller="EmailController">
+        <tbody>
+            <tr ng-repeat="email in emails">
+                <td>{{ email.from }}</td>
+                <td>{{ email.subject }}</td>
+                <td>{{ email.date }}</td>
+            </tr>
+        </tbody>
+    </table>
 	</article>	
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
